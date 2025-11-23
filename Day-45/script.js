@@ -1,10 +1,71 @@
 //ASYNCHRONOUS IN JAVASCRIPT
 //----allows operations like network requests or file I/O to run in the background without blocking the main thread, keeping the user interface responsive.
 
+const { useCallback } = require("react");
+
 //uses settimeout -> code does Not wait
 
-console.log("start");
+// console.log("start");
+// setTimeout(()=>{
+//     console.log("This print for 2 seconds")
+// },2000);
+// console.log("End");
+
+// let num=1;
+// setTimeout(()=>{
+//     num=5;
+// },10);
+
+// setTimeout(()=>{
+//     console.log("A:",num);
+// },0);
+// console.log("B:",num);//b=1,a=1
+
+//question in whatsapp
+// console.log("step 1");
+// setTimeout(()=>{
+//     console.log("step 2");
+// },0);
+// setTimeout(()=>{
+//     console.log("step 3")
+// },500);
+// setTimeout(()=>{
+//     console.log("step 4");
+// },100);
+
+
+console.log("A");
 setTimeout(()=>{
-    console.log("This print for 2 seconds")
-},2000);
-console.log("End");
+    console.log("B");
+},0);
+setTimeout(()=>{
+    console.log("c")
+},0);
+setTimeout(()=>{
+    console.log("d")
+},50);
+
+//callback in js
+//A callback is a functio passed as an argument to another to another function and executed inside it to perform a task
+
+//callbacks are commonly used in asynchronous operations such that settimeout,file reading ,or API calls.
+
+//with callback
+function greet(name, Callback){
+    console.log("Hello,"+ name);
+    Callback();
+}
+function askquestion(){
+    console.log("How are you ?");
+}
+greet("samikshya",askquestion);//hello samikshya how are you?
+
+//without callback
+function greet(name){
+    console.log("Hello,"+ name);
+}
+function askquestion(){
+    console.log("How are you ?");
+}
+greet("nisa");
+askquestion();//hello nisa
