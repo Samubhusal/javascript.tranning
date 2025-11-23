@@ -27,7 +27,7 @@ class person{
     address;
     phoneNumber;
 
-    constructor(name,address,phoneNumber){
+    constructor(name,address,phoneNumber){//class bitra object construct garxa 
         this.name=name;
         this.address=address;
         this.phoneNumber=phoneNumber;
@@ -60,7 +60,7 @@ let animal2=new Animal('Dog','pet','canis lupus familiaris');
 console.log(animal1);
 console.log(animal2);
 
-class students{
+class students{//big application terminated to the short form 
     name;
     id;
     course;
