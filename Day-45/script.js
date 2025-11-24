@@ -111,3 +111,32 @@
 // await tells JavaScript:
 // “Stop here until this work is finished.”
 // (But only works inside an async function.)
+
+// function api(){
+//     return new Promise((resolve, reject) => {
+//        setTimeout(()=>{
+//         console.log("Weather data");
+//         resolve(200);
+//        },2000) ;
+//     });
+// }
+// async function getWeatherData() {
+//     await api();
+    
+// }
+
+//create an async function greetuser
+
+function  user(){
+    return new Promise((resolve,reject)=>{
+        console.log("Hello");
+        resolve(0);
+
+    });
+} 
+greetuser();
+async function greetuser() {
+    await user();
+}
+greetuser();
+
